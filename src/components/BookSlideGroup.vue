@@ -17,7 +17,6 @@
           :key="index"
           :book="item"
         />
-
       </v-slide-group-item>
     </v-slide-group>
   </v-sheet>
@@ -25,7 +24,6 @@
 
 <script>
   import BookCard from './BookCard.vue'
-  import { covers } from '../assets/booklist.js'
   import books from '../assets/books.json'
   export default {
     components: {
