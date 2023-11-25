@@ -5,16 +5,15 @@
     height="200"
     elevation="0"
     theme="dark"
-    :image="cover"
+    :image="book.cover"
   >
-
   </v-card>
 </template>
 
 
 <script>
   export default {
-    props: ['cover'],
+    props: ['book'],
     data: () => ({
       model: null,
     }),

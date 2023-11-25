@@ -15,7 +15,7 @@
         <BookCard 
           v-for="(item, index) in booklist"
           :key="index"
-          :cover="item"
+          :book="item"
         />
 
       </v-slide-group-item>
@@ -26,6 +26,7 @@
 <script>
   import BookCard from './BookCard.vue'
   import { covers } from '../assets/booklist.js'
+  import books from '../assets/books.json'
   export default {
     components: {
         BookCard
@@ -33,7 +34,7 @@
     props: ['title'],
     data: () => ({
       model: null,
-      booklist: covers.slice().sort((a,b) => 0.5 - Math.random())
+      booklist: books.slice().sort((a,b) => 0.5 - Math.random())
     }),
   }
 
