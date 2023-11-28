@@ -5,7 +5,7 @@
     hover
     width="140"
     height="200"
-    elevation="6"
+    elevation="0"
     :image="book.cover"
     link
   >
@@ -50,6 +50,9 @@
                 <strong>Units available:</strong> {{ book.available }}
             </div>
             </div>
+            <v-btn @click="addToCart()">
+              Add to Cart
+            </v-btn>
           </v-card-text>
           <v-card-actions>
             <v-btn color="primary" block @click="dialog = false">Close Dialog</v-btn>
@@ -68,6 +71,11 @@
     data: () => ({
       dialog: false,
     }),
+    methods: {
+      addToCart() {
+        this.emitter.emit('add-to-cart', this.book);
+      }
+    }
   }
 </script>
 
