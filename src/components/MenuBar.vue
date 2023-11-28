@@ -9,6 +9,10 @@
             <v-icon icon="mdi-cart" color="white" size="large" id="menu-activator"></v-icon>
           </v-badge>
 
+          <a href="/" v-on:click="showHomepage = true" style="align-items: center; position: absolute; left:50%">
+            <img src="src\assets\logo.svg" style=" width:40px;">
+          </a>
+
       </v-app-bar>
 
 
