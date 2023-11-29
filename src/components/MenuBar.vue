@@ -1,10 +1,14 @@
 <template>
-      <v-app-bar style="background-color: MediumSeaGreen" elevation="0">
+      <v-app-bar style="background-color: MediumSeaGreen"  elevation="0">
           <v-app-bar-nav-icon color="white"/>
 
           <v-spacer></v-spacer>
-          <a href="/" v-on:click="showHomepage.value = true" style="align-items: center;">
-            <img src="src\assets\Peaks_Logo_3.png" style="height:100px">
+          <a href="/" v-on:click="showHomepage.value = true" style="text-decoration: none;">
+            <div style="display: flex; align-items: center;">
+              <img src="src\assets\[Cropped]Peaks_Logo_3.png" style="height:60px; margin:.5em">
+              <h1 style="color: white; margin:.5em">PEAKS Bookstore</h1>
+            </div>
+            
           </a>
           <v-spacer></v-spacer>
           <v-badge 
