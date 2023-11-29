@@ -12,84 +12,90 @@
           <v-btn color="white" icon >
             <v-badge 
               color="red"
-              :content="totalItems()"
-              :model-value="totalItems() > 0"
+              :content="totalItems"
+              :model-value="totalItems > 0"
             >
               <v-icon icon="mdi-cart" color="white" size="large" id="menu-activator" ></v-icon>
             </v-badge>
+
+
+           <!-- Cart -->
+          <v-menu
+            transition="slide-y-transition"
+            activator="parent"
+            :close-on-content-click="false"
+          >
+            <v-card class="pa-2">
+              <v-row
+                  align="start"
+                  no-gutters
+              >
+                <v-list>
+
+                  <v-list-item  v-if="totalItems <= 0">
+                    <v-list-item-title class="text-grey pa-1"><i>Your Cart is Empty</i></v-list-item-title>
+                  </v-list-item>
+            
+                  <v-list-item
+                    v-for="(item, i) in items"
+                    :key="item.book.title"
+                    class="mb-2"
+                  >
+                    <v-list-item-title class="text-left">{{ item.book.title }} - <b>${{ item.book.price*item.quantity }}</b> </v-list-item-title>
+              
+                    <v-btn-group density="compact" divided variant="outlined" class ="ml-6">
+                      <v-btn :ripple="false" icon="mdi-minus"  @click="decrement(i)"></v-btn>
+                      <v-btn icon class="disable-events">{{ item.quantity }}</v-btn>
+                      <v-btn :ripple="false" icon="mdi-plus" @click="increment(i)"></v-btn>
+                    </v-btn-group>
+                        
+                  </v-list-item>
+                  <v-list-item>
+                    <v-list-item-title class="text-left"> <b>Total: ${{ totalPrice }}</b></v-list-item-title>
+                  </v-list-item>
+                </v-list>
+
+              </v-row>
+              
+              <v-row no-gutters class="pb-4">
+                <v-col align="center">
+                  <v-btn color="secondary" elevation="0" :disabled="totalItems <= 0">Checkout</v-btn>
+                </v-col>
+              </v-row>
+          
+            </v-card>
+          </v-menu>
+
         </v-btn>
   
       </v-app-bar>
 
-      <!-- Cart -->
-      <v-menu
-        transition="slide-y-transition"
-        activator="#menu-activator"
-        :close-on-content-click="false"
-      >
-        <v-card class="pa-2">
-          <v-row
-              align="left"
-              no-gutters
-          >
-            <v-list>
-
-              <v-list-item  v-if="totalItems() <= 0">
-                <v-list-item-title class="text-grey pa-1"><i>Your Cart is Empty</i></v-list-item-title>
-              </v-list-item>
-         
-              <v-list-item
-                v-for="(item, i) in items"
-                :key="i"
-                class="mb-2"
-              >
-                <v-list-item-title class="text-left">{{ item.book.title }} - <b>${{ item.book.price*item.quantity }}</b> </v-list-item-title>
-          
-                <v-btn-group density="compact" divided variant="outlined" class ="ml-6">
-                  <v-btn :ripple="false" icon="mdi-minus"  @click="decrement(i)"></v-btn>
-                  <v-btn icon class="disable-events">{{ item.quantity }}</v-btn>
-                  <v-btn :ripple="false" icon="mdi-plus" @click="increment(i)"></v-btn>
-                </v-btn-group>
-                    
-              </v-list-item>
-              <v-list-item>
-                <v-list-item-title class="text-left"> <b>Total: ${{ this.totalPrice() }}</b></v-list-item-title>
-              </v-list-item>
-            </v-list>
-
-          </v-row>
-          
-          <v-row no-gutters class="pb-4">
-            <v-col align="center">
-              <v-btn color="secondary" elevation="0" :disabled="totalItems() <= 0">Checkout</v-btn>
-            </v-col>
-          </v-row>
       
-        </v-card>
-      </v-menu>
 </template>
 
 <script>
   export default {
     data: () => ({
-      items: [],
+      items: []
     }),
     mounted() { 
       this.emitter.on("add-to-cart", book => {
         this.addItem(book)
       });
     },
-    methods: {
-
-      addItem(book) {
-        let result = this.items.find(item => item.book === book) 
-        if(result) {        
-          result.quantity++
-        } else {
-          this.items.push({book: book, quantity: 1})
-        }
-      },
-
+    created() {
+      if(localStorage.getItem('cartItems'))
+        this.items = JSON.parse(localStorage.getItem('cartItems'));
+    },
+    watch: {
+      items: {
+        handler() {
+          localStorage.setItem('cartItems', JSON.stringify(this.items))
+        },
+        deep: true,
+      }
+    },
+    computed: {
       totalItems() {
         let sum = 0;
         this.items.forEach(item => {sum += item.quantity});
@@ -100,6 +106,17 @@
         let sum = 0;
         this.items.forEach(item => (sum += (item.book.price*item.quantity)))
         return sum;
+      },
+
+    },
+    methods: {
+      addItem(book) {
+        let result = this.items.find(item => item.book === book) 
+        if(result) {        
+          result.quantity++
+        } else {
+          this.items.push({book: book, quantity: 1})
+        }
       },
 
       increment(index) {

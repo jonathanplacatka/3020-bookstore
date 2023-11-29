@@ -31,7 +31,6 @@
                 :size="13"
                 :model-value=book.rating
                 active-color="warning"
-                density="auto"
                 />
             </div>
 
