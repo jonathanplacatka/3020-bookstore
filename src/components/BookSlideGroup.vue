@@ -1,19 +1,16 @@
 <template>
   <v-sheet
-    class="mx-auto"
     elevation="0"
-    max-width="1350"
   >
     <h2>{{ title }}</h2>
 
     <v-slide-group
-      v-model="model"
       selected-class="bg-success"
       show-arrows
     >
       <v-slide-group-item>
         <BookCard 
-          v-for="(item, index) in booklist"
+          v-for="(item, index) in filtered"
           :key="index"
           :book="item"
         />
@@ -29,11 +26,12 @@
     components: {
         BookCard
     },
-    props: ['title'],
-    data: () => ({
-      model: null,
-      booklist: books.slice().sort((a,b) => 0.5 - Math.random())
-    }),
+    props: ['title', 'tag'], 
+    computed: {
+      filtered() {
+        return books.filter((book) => book.tags.includes(this.tag)).sort((a,b) => 0.5 - Math.random())
+      }
+    }
   }
 
   

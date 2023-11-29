@@ -13,18 +13,25 @@
 
       </div>
 
-      <div v-if="showHomepage">
-        <BookSlideGroup title="Popular" />
-        <BookSlideGroup title="Recommended" />
-      </div>
-
-      <div v-else>
-        <h2> Search Results</h2>
-
-        <div class="search-results">
-          <BookCard v-for="(item, index) in searchResults" :key="index" :book="item" :title="props.title" />
+      <v-sheet
+        class="mx-10"
+        elevation="0"
+      >
+        <div v-if="showHomepage">
+          <BookSlideGroup title="Popular" tag="popular"/>
+          <BookSlideGroup title="Recommended" tag="recommended"/>
+          <BookSlideGroup title="First-Year" tag="firstyear"/>
+          <BookSlideGroup title="Math" tag="math"/>
+          <BookSlideGroup title="Arts" tag="arts"/>
+          <BookSlideGroup title="Sciences" tag="science"/>
         </div>
-      </div>
+        <div v-else>
+          <h2> Search Results</h2>
+          <div class="search-results">
+            <BookCard v-for="(item, index) in searchResults" :key="index" :book="item" :title="props.title" />
+          </div>
+        </div>
+      </v-sheet>
 
     </v-main>
   </v-app>
