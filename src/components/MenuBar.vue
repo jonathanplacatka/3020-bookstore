@@ -1,6 +1,11 @@
 <template>
       <v-app-bar style="background-color: MediumSeaGreen" elevation="0">
           <v-app-bar-nav-icon color="white"/>
+
+          <v-spacer></v-spacer>
+          <a href="/" v-on:click="showHomepage.value = true" style="align-items: center;">
+            <img src="src\assets\Peaks_Logo_3.png" style="height:100px">
+          </a>
           <v-spacer></v-spacer>
           <v-badge 
             color="red"
@@ -10,11 +15,9 @@
           >
             <v-icon icon="mdi-cart" color="white" size="large" id="menu-activator"></v-icon>
           </v-badge>
-          <v-spacer></v-spacer>
-          <a href="/" v-on:click="showHomepage.value = true" style="align-items: center;">
-            <img src="src\assets\Peaks_Logo_3.png" style="height:100px">
-          </a>
-          <v-spacer></v-spacer>
+         
+         
+
 
       </v-app-bar>
 
