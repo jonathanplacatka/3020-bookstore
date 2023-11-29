@@ -9,6 +9,11 @@
           </a>
           <v-spacer></v-spacer>
 
+          <v-btn color= "white" icon>
+            <v-icon icon="mdi-account" color="white" size="large" id="menu-activator" ></v-icon>
+          </v-btn>
+
+
           <v-btn color="white" icon >
             <v-badge 
               color="red"
