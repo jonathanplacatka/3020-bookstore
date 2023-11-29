@@ -116,7 +116,7 @@
     },
     methods: {
       addItem(book) {
-        let result = this.items.find(item => item.book === book) 
+        let result = this.items.find(item => item.book.title === book.title) 
         if(result) {        
           result.quantity++
         } else {
