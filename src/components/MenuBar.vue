@@ -1,5 +1,6 @@
 <template>
-      <v-app-bar style="background-color: MediumSeaGreen" elevation="0">
+      <!-- Menu Bar -->
+      <v-app-bar color="primary" elevation="0">
           <v-app-bar-nav-icon color="white"/>
 
           <v-spacer></v-spacer>
@@ -7,43 +8,63 @@
             <img src="src\assets\Peaks_Logo_3.png" style="height:100px">
           </a>
           <v-spacer></v-spacer>
-          <v-badge 
-            color="red"
-            :content="numItems()"
-            :model-value="items.length > 0"
-            class="pr-6"
-          >
-            <v-icon icon="mdi-cart" color="white" size="large" id="menu-activator"></v-icon>
-          </v-badge>
-         
-         
 
-
+          <v-btn color="white" icon >
+            <v-badge 
+              color="red"
+              :content="totalItems()"
+              :model-value="totalItems() > 0"
+            >
+              <v-icon icon="mdi-cart" color="white" size="large" id="menu-activator" ></v-icon>
+            </v-badge>
+        </v-btn>
+  
       </v-app-bar>
 
+      <!-- Cart -->
       <v-menu
         transition="slide-y-transition"
         activator="#menu-activator"
+        :close-on-content-click="false"
       >
-        <v-card>
-          <v-col
-              align="center"
+        <v-card class="pa-2">
+          <v-row
+              align="left"
+              no-gutters
           >
             <v-list>
+
+              <v-list-item  v-if="totalItems() <= 0">
+                <v-list-item-title class="text-grey pa-1"><i>Your Cart is Empty</i></v-list-item-title>
+              </v-list-item>
+         
               <v-list-item
                 v-for="(item, i) in items"
                 :key="i"
+                class="mb-2"
               >
-                <v-list-item-title class="text-left">{{ item.book.title }} ({{ item.quantity }}) - <b>${{ item.book.price }}</b> </v-list-item-title>
+                <v-list-item-title class="text-left">{{ item.book.title }} - <b>${{ item.book.price*item.quantity }}</b> </v-list-item-title>
+          
+                <v-btn-group density="compact" divided variant="outlined" class ="ml-6">
+                  <v-btn :ripple="false" icon="mdi-minus"  @click="decrement(i)"></v-btn>
+                  <v-btn icon class="disable-events">{{ item.quantity }}</v-btn>
+                  <v-btn :ripple="false" icon="mdi-plus" @click="increment(i)"></v-btn>
+                </v-btn-group>
+                    
               </v-list-item>
               <v-list-item>
-                <v-list-item-title class="text-left"> <b>Total: {{ this.total() }}</b></v-list-item-title>
+                <v-list-item-title class="text-left"> <b>Total: ${{ this.totalPrice() }}</b></v-list-item-title>
               </v-list-item>
             </v-list>
 
-            <v-btn>Checkout</v-btn>
-
-          </v-col>
+          </v-row>
+          
+          <v-row no-gutters class="pb-4">
+            <v-col align="center">
+              <v-btn color="secondary" elevation="0" :disabled="totalItems() <= 0">Checkout</v-btn>
+            </v-col>
+          </v-row>
+      
         </v-card>
       </v-menu>
 </template>
@@ -59,6 +80,7 @@
       });
     },
     methods: {
+
       addItem(book) {
         let result = this.items.find(item => item.book === book) 
         if(result) {        
@@ -67,17 +89,35 @@
           this.items.push({book: book, quantity: 1})
         }
       },
-      numItems() {
+
+      totalItems() {
         let sum = 0;
         this.items.forEach(item => {sum += item.quantity});
         return sum;
       },
-      total() {
+
+      totalPrice() {
         let sum = 0;
         this.items.forEach(item => (sum += (item.book.price*item.quantity)))
         return sum;
+      },
+
+      increment(index) {
+        this.items[index].quantity++;
+      },
+
+      decrement(index) {
+        this.items[index].quantity--;
+        if(this.items[index].quantity == 0) {
+          this.items.splice(index, 1)
+        }
       }
     }
   }
 </script>
 
+<style scoped>
+  .disable-events {
+    pointer-events: none;
+  }
+</style>
