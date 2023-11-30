@@ -17,10 +17,10 @@
         >
           <v-card>
             <v-card-item>
+              <v-card-title> {{ book.title }} </v-card-title>
               <v-btn icon="$close" variant="text" @click="dialog = false" style="position: absolute; top: 0; right: 0;"></v-btn>
-          </v-card-item>
-            <v-card-title> {{ book.title }} </v-card-title>
-            <v-card-text>
+            </v-card-item>
+            <v-card-text class="mx-3 my-3">
               <div style="display: flex; font-size:12px; width: 100%;">
                 <div style="flex: 40%; padding-right: 16px;"> 
                     <img :src=book.cover class="custom-image">
@@ -64,9 +64,6 @@
           </div>
       
             </v-card-text>
-            <v-card-actions>
-              <v-btn color="primary" block @click="dialog = false">Close Dialog</v-btn>
-            </v-card-actions>
           </v-card>
       </v-dialog>
     </v-card>
