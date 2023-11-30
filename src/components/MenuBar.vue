@@ -25,9 +25,11 @@
 
 
       <!-- Cart -->
-      <v-menu transition="slide-y-transition" activator="parent" :close-on-content-click="false">
+      <v-menu v-model="isCartOpen" transition="slide-y-transition" activator="parent" :close-on-content-click="false">
         <v-card class="pa-2">
-          <v-card-title class="text-center">Cart</v-card-title>
+          <v-card-title class="text-center">
+            <v-btn icon="$close" variant="text" @click="isCartOpen = false" style="position: absolute; top: 0; right: 0;"></v-btn>
+            Cart</v-card-title>
           <v-row align="start" no-gutters>
             <v-list>
 
@@ -71,6 +73,7 @@
 export default {
   data: () => ({
     items: [],
+  isCartOpen: false,
   }),
   mounted() {
     this.emitter.on("add-to-cart", book => {
