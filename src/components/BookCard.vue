@@ -53,7 +53,7 @@
                 </div>
                 <div style="flex: 100%; display: flex; justify-content: space-between; align-items: flex-end; padding-top: 12px;">
             <div>
-              <input type="radio" id="physical" value="physical" name="type-of-book" />
+              <input type="radio" id="physical" value="physical" name="type-of-book" checked/>
               <label for="physical">Physical:&emsp;${{ book.price }}</label><br>
 
               <input type="radio" id="digital" value="digital" name="type-of-book" />
@@ -87,8 +87,12 @@ export default {
   }),
   methods: {
     addToCart() {
-      this.emitter.emit('add-to-cart', this.book);
+      let isPhysical = document.querySelector('input[name=type-of-book]:checked').value == 'physical'
+      let selectedPrice = isPhysical ? this.book.price : this.book.eprice
+      this.emitter.emit('add-to-cart', {book: this.book, isPhysical: isPhysical, selectedPrice: selectedPrice});
       this.dialog = false;
+
+      console.log(isPhysical) 
       
       document.getElementById('cart').animate(
         [{ transform: "scale(1)"}, {transform: "scale(1.25)"},  {transform: "scale(1)"}], 
