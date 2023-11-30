@@ -9,46 +9,56 @@
         <input v-model="searchInput" @keydown.enter.prevent="doSearch" placeholder="Search" class="input-style" />
       </div>
 
-      <v-sheet
-        class="mx-10"
-        elevation="0"
-      >
-        <div class="categories" v-if="showHomepage">
-          <BookSlideGroup title="Popular" tag="popular"/>
-          <BookSlideGroup title="Recommended" tag="recommended"/>
-          <BookSlideGroup title="First-Year" tag="firstyear"/>
-          <BookSlideGroup title="Math" tag="math"/>
-          <BookSlideGroup title="Arts" tag="arts"/>
-          <BookSlideGroup title="Sciences" tag="science"/>
+      <v-sheet class="content" elevation="0">
+        <div v-if="showHomepage" class="categories-container">
+          <BookSlideGroup title="Popular" tag="popular" />
+          <BookSlideGroup title="Recommended" tag="recommended" />
+          <BookSlideGroup title="First-Year" tag="firstyear" />
+          <BookSlideGroup title="Math" tag="math" />
+          <BookSlideGroup title="Arts" tag="arts" />
+          <BookSlideGroup title="Sciences" tag="science" />
         </div>
-        <div v-else>
-          <h2> Search Results</h2>
+        <div v-else class="">
+          <h2 class="search-header"> Search Results</h2>
           <div class="search-results">
-            <BookCard v-for="(item, index) in searchResults" :key="index" :book="item" :title="props.title"/>
+            <BookCard v-for="(item, index) in searchResults" :key="index" :book="item" :title="props.title" />
           </div>
         </div>
       </v-sheet>
-
     </v-main>
-    <v-footer color="accent">
-      <v-spacer></v-spacer>
-      <p>2023 - <b>PEAKS</b></p>
-    </v-footer>
   </v-app>
 </template>
 
-
 <style scoped>
 
-.categories {
-  display:flex;
-  flex-direction: column;
-  row-gap: 20px;
+.content {
+  padding-left: 40px;
+  padding-right: 40px;
 }
+
+.search-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(156px, max-content));
+  grid-gap: 0px;
+  justify-content: begin;
+  padding: initial;
+}
+
 .search-box {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
+}
+
+.search-header {
+  margin-left: 16px;
+}
+
+.categories-container {
+  display:flex;
+  flex-direction: column;
+  row-gap: 30px;
 }
 
 .input-style {
@@ -60,20 +70,6 @@
   border-radius: 2rem;
 }
 
-.search-results {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 1rem;
-  margin: 1rem;
-}
-
-h2 {
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-  margin-left: 3rem;
-  padding-left: 3rem;
-}
 
 </style>
 

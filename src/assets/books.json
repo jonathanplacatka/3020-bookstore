@@ -418,7 +418,7 @@
         ]
     },
     {
-        "title": "Distributed Computing: Principles, Algorithms,and Systems",
+        "title": "Distributed Computing: Principles, Algorithms, and Systems",
         "author": "Ajay D. Kshemkalyani, Mukesh Singhal",
         "isbn": "713785792325",
         "edition": "8th",
@@ -511,6 +511,428 @@
             "popular",
             "recommended",
             "science"
+        ]
+    },
+    {
+        "title": "Music of the Baroque",
+        "author": "David Schulenberg",
+        "isbn": "237715245867498",
+        "edition": "3rd",
+        "year": "2005",
+        "price": "89.99",
+        "available": "5",
+        "cover": "https://dynamic.indigoimages.ca/books/9780199942015.jpg?scaleup=true&width=600&quality=85&lang=en",
+        "rating": "3.5/5",
+        "tags": [
+            "popular",
+            "recommended",
+            "arts"
+        ]
+    },
+    {
+        "title": "A History of Western Music",
+        "author": "J.Peter Burkholder, Donald Jay Grout, Claude V. Palisca",
+        "isbn": "1749356892345",
+        "edition": "10th",
+        "year": "2005",
+        "price": "189.99",
+        "available": "5",
+        "cover": "https://cdn2.wwnorton.com/wwnproducts/COLLEG/9/7/9780393668179/9780393668179_300.jpeg",
+        "rating": "3/5",
+        "tags": [
+            "popular",
+            "recommended",
+            "arts",
+            "firstyear"
+        ]
+    },
+    {
+        "title": "The Musician's Guide to Theory and Analysis",
+        "author": "Jane Piper Glendinning, Elizabeth West Marvin",
+        "isbn": "1247851023751037",
+        "edition": "4th",
+        "year": "2005",
+        "price": "189.99",
+        "available": "5",
+        "cover": "https://cdn2.wwnorton.com/wwnproducts/COLLEG/8/5/9780393442458/9780393442458_300.jpeg",
+        "rating": "2/5",
+        "tags": [
+            "popular",
+            "recommended",
+            "arts",
+            "firstyear"
+        ]
+    },
+    {
+        "title": "Vold's Theoretical Criminology",
+        "author": "Jeffrey B. Snipes, Thomas J. Bernard, Alexandeer L. Gerould",
+        "isbn": "7385235624795",
+        "edition": "8th",
+        "year": "2005",
+        "price": "189.99",
+        "available": "5",
+        "cover": "https://www.directtextbook.com/large/9780190940515.jpg",
+        "rating": "5/5",
+        "tags": [
+            "popular",
+            "recommended",
+            "arts"
+        ]
+    },
+    {
+        "title": "Crime and Criminology",
+        "author": "Sue Titus Reid",
+        "isbn": "18265786455",
+        "edition": "13th",
+        "year": "2005",
+        "price": "199.99",
+        "available": "5",
+        "cover": "https://m.media-amazon.com/images/I/71WsVSe9vLL._AC_UF1000,1000_QL80_.jpg",
+        "rating": "2/5",
+        "tags": [
+            "popular",
+            "recommended",
+            "arts"
+        ]
+    },
+    {
+        "title": "A Primer in the Sociology of Crime",
+        "author": "S. Giora Shomam, John Hoffmann",
+        "isbn": "813641734513",
+        "edition": "13th",
+        "year": "2005",
+        "price": "199.99",
+        "available": "5",
+        "cover": "https://m.media-amazon.com/images/I/51y30MZRXoL.jpg",
+        "rating": "2.6/5",
+        "tags": [
+            "popular",
+            "recommended",
+            "arts"
+        ]
+    },
+    {
+        "title": "Corporate Criminal Liability",
+        "author": "Amanda Pinto, Martin Evans",
+        "isbn": "81361457897845513",
+        "edition": "3rd",
+        "year": "2005",
+        "price": "199.99",
+        "available": "5",
+        "cover": "https://legal.thomsonreuters.com.au/Images/product/AU/128872.jpg",
+        "rating": "2.6/5",
+        "tags": [
+            "popular",
+            "recommended",
+            "arts"
+        ]
+    },
+    {
+        "title": "Class, Race, Gender, Crime: The Social Realities of Justice in America",
+        "author": "Gregg Barak, Paul Leighton, Allison Colton",
+        "isbn": "82378645765415",
+        "edition": "5th",
+        "year": "2005",
+        "price": "199.99",
+        "available": "5",
+        "cover": "https://images.booksense.com/images/876/268/9781442268876.jpg",
+        "rating": "4.6/5",
+        "tags": [
+            "popular",
+            "recommended",
+            "arts"
+        ]
+    },
+    {
+        "title": "Introducing Linguistics: Theoretical and Applied Approaches",
+        "author": "Joyce Bruhn de Garavito, John W. Schwieter",
+        "isbn": "1377654619045",
+        "edition": "5th",
+        "year": "2005",
+        "price": "199.99",
+        "available": "5",
+        "cover": "https://assets.cambridge.org/97811087/10657/cover/9781108710657.jpg",
+        "rating": "4.6/5",
+        "tags": [
+            "popular",
+            "recommended",
+            "arts",
+            "firstyear"
+        ]
+    },
+    {
+        "title": "An Introduction to Language and Linguistics",
+        "author": "Ralph W. Fasold, Jeff Connor-Linton",
+        "isbn": "192567467534",
+        "edition": "5th",
+        "year": "2010",
+        "price": "199.99",
+        "available": "5",
+        "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1344734469l/2507310.jpg",
+        "rating": "4.1/5",
+        "tags": [
+            "popular",
+            "recommended",
+            "arts",
+            "firstyear"
+        ]
+    },
+    {
+        "title": "Introduction to Human Nutrition",
+        "author": "Michael J Gibney, Susan A Lanham-New, Aedin Cassidy, Hester H Vorster",
+        "isbn": "192374835906482",
+        "edition": "2nd",
+        "year": "2010",
+        "price": "199.99",
+        "available": "5",
+        "cover": "https://m.media-amazon.com/images/I/512amodszfL._AC_UF1000,1000_QL80_.jpg",
+        "rating": "4.1/5",
+        "tags": [
+            "popular",
+            "recommended",
+            "arts",
+            "firstyear"
+        ]
+    },
+    {
+        "title": "Introductory Foods",
+        "author": "Barbara Scheule, Amanda Frye",
+        "isbn": "12743805720570",
+        "edition": "15th",
+        "year": "2010",
+        "price": "199.99",
+        "available": "5",
+        "cover": "https://images-na.ssl-images-amazon.com/images/I/8159dDl9+bL._AC_UL600_SR600,600_.jpg",
+        "rating": "4.1/5",
+        "tags": [
+            "popular",
+            "recommended",
+            "arts",
+            "firstyear"
+        ]
+    },
+    {
+        "title": "Introduction to Food Chemistry",
+        "author": "Vassilis Kontogiorgos",
+        "isbn": "7874851047580",
+        "edition": "5th",
+        "year": "2010",
+        "price": "19.99",
+        "available": "5",
+        "cover": "https://isbncoverdb.com/images/book-cover-introduction-to-food-chemistry.webp",
+        "rating": "4.4/5",
+        "tags": [
+            "popular",
+            "recommended",
+            "arts",
+            "firstyear"
+        ]
+    },
+    {
+        "title": "Introduction to Linear Algebra",
+        "author": "Gilbert Strang",
+        "isbn": "84578253465140",
+        "edition": "5th",
+        "year": "2010",
+        "price": "149.99",
+        "available": "5",
+        "cover": "https://math.mit.edu/~gs/linearalgebra/ila5/linearalgebra5_Front.jpg",
+        "rating": "4.4/5",
+        "tags": [
+            "popular",
+            "recommended",
+            "math",
+            "firstyear"
+        ]
+    },
+    {
+        "title": "Linear Algebra with Applications",
+        "author": "George Nakos, David Joyner",
+        "isbn": "658302848202475",
+        "edition": "5th",
+        "year": "2021",
+        "price": "149.99",
+        "available": "5",
+        "cover": "https://m.media-amazon.com/images/I/51D4Tv-y2LL._AC_UF1000,1000_QL80_.jpg",
+        "rating": "3.5/5",
+        "tags": [
+            "popular",
+            "recommended",
+            "math",
+            "firstyear"
+        ]
+    },
+    {
+        "title": "Discrete Mathematics and Its Applications",
+        "author": "Kenneth H. Rosen",
+        "isbn": "137050128403614",
+        "edition": "7th",
+        "year": "2021",
+        "price": "149.99",
+        "available": "5",
+        "cover": "https://m.media-amazon.com/images/I/61g-4Fx0ieL._AC_UF1000,1000_QL80_.jpg",
+        "rating": "3.5/5",
+        "tags": [
+            "popular",
+            "recommended",
+            "math",
+            "firstyear"
+        ]
+    },
+    {
+        "title": "Introductory Discrete Mathematics",
+        "author": "V.K. Balakrishnan",
+        "isbn": "1984905768476863945703",
+        "edition": "5th",
+        "year": "2013",
+        "price": "149.99",
+        "available": "5",
+        "cover": "https://cdn.kobo.com/book-images/b90c71b2-cd3d-4949-b80b-3280be92f631/1200/1200/False/introductory-discrete-mathematics.jpg",
+        "rating": "1.5/5",
+        "tags": [
+            "popular",
+            "recommended",
+            "math",
+            "firstyear"
+        ]
+    },
+    {
+        "title": "Introduction to Discrete Mathematics",
+        "author": "M. K. Sen, B. C. Chakraborty",
+        "isbn": "1823743403985",
+        "edition": "5th",
+        "year": "2013",
+        "price": "149.99",
+        "available": "5",
+        "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1516995301i/38211791.jpg",
+        "rating": "1.5/5",
+        "tags": [
+            "popular",
+            "recommended",
+            "math",
+            "firstyear"
+        ]
+    },
+    {
+        "title": "Introduction to Numerical Linear Algebra and Optimisation",
+        "author": "Philippe G. Ciarlet",
+        "isbn": "87482365674545652",
+        "edition": "5th",
+        "year": "2013",
+        "price": "149.99",
+        "available": "5",
+        "cover": "https://assets.cambridge.org/97805213/39841/large_cover/9780521339841i.jpg",
+        "rating": "2.5/5",
+        "tags": [
+            "popular",
+            "recommended",
+            "math"
+        ]
+    },
+    {
+        "title": "Fundamentals of University Mathematics",
+        "author": "Colin McGregor, Jonathan Nimmo, Wilson Stothers",
+        "isbn": "229820385690247584",
+        "edition": "5th",
+        "year": "2013",
+        "price": "149.99",
+        "available": "5",
+        "cover": "https://m.media-amazon.com/images/I/61EhE3B+HzL._AC_UF894,1000_QL80_.jpg",
+        "rating": "4.5/5",
+        "tags": [
+            "popular",
+            "recommended",
+            "math"
+        ]
+    },
+    {
+        "title": "Elementary Differential Equations with Boundary Value Problems",
+        "author": "William F. Trench",
+        "isbn": "1827483743890",
+        "edition": "5th",
+        "year": "2013",
+        "price": "149.99",
+        "available": "5",
+        "cover": "data:image/jpeg;base64,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",
+        "rating": "3.5/5",
+        "tags": [
+            "recommended",
+            "math"
+        ]
+    },
+    {
+        "title": "Ordinary Differential Equations",
+        "author": "Kenneth B. Howell",
+        "isbn": "19248751047134",
+        "edition": "2nd",
+        "year": "2013",
+        "price": "129.99",
+        "available": "5",
+        "cover": "https://m.media-amazon.com/images/I/518FZQ4uixL.jpg",
+        "rating": "2.5/5",
+        "tags": [
+            "popular",
+            "math"
+        ]
+    },
+    {
+        "title": "Introduction to Proofs and Proof Strategies",
+        "author": "Shay Fuchs",
+        "isbn": "31284710505890",
+        "edition": "2nd",
+        "year": "2013",
+        "price": "129.99",
+        "available": "5",
+        "cover": "https://assets.cambridge.org/97810090/96287/large_cover/9781009096287i.jpg",
+        "rating": "2.5/5",
+        "tags": [
+            "popular",
+            "math"
+        ]
+    },
+    {
+        "title": "Introduction to the Foundations of Mathematics",
+        "author": "N/A",
+        "isbn": "6573934757905700",
+        "edition": "2nd",
+        "year": "2013",
+        "price": "74.80",
+        "available": "5",
+        "cover": "https://m.media-amazon.com/images/I/A1c-VZDPZaL._AC_UF1000,1000_QL80_.jpg",
+        "rating": "2.5/5",
+        "tags": [
+            "popular",
+            "math"
+        ]
+    },
+    {
+        "title": "The Material Theory of Induction",
+        "author": "John D. Norton",
+        "isbn": "165658976814856",
+        "edition": "2nd",
+        "year": "2013",
+        "price": "74.80",
+        "available": "5",
+        "cover": "https://press.ucalgary.ca/wp-content/uploads/2021/05/9781773852539_FC.jpg",
+        "rating": "2.5/5",
+        "tags": [
+            "popular",
+            "math"
+        ]
+    },
+    {
+        "title": "Introduction to Number Theory",
+        "author": "Marty Erickson, Anthony Vazzana, David Garth",
+        "isbn": "2357675456739034",
+        "edition": "2nd",
+        "year": "2013",
+        "price": "78.80",
+        "available": "5",
+        "cover": "https://m.media-amazon.com/images/I/51HPv1RlK+L._AC_UF1000,1000_QL80_.jpg",
+        "rating": "2.5/5",
+        "tags": [
+            "popular",
+            "math"
         ]
     }
 ]
