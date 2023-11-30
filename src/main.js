@@ -13,6 +13,7 @@ import App from './App.vue'
 // Composables
 import { createApp } from 'vue'
 
+//events
 import mitt from 'mitt'
 const emitter = mitt()
 

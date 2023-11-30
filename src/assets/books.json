@@ -8,8 +8,13 @@
         "price": "369.99",
         "available": "5",
         "cover": "https://m.media-amazon.com/images/I/51MLBbK0fyL._AC_UF1000,1000_QL80_.jpg",
-        "rating": "3.3",
-        "tags": []
+        "rating": "3.3/5",
+        "tags": [
+            "popular",
+            "recommended",
+            "math",
+            "firstyear"
+        ]
     },
     {
         "title": "An Introduction To Game Theory",
@@ -21,7 +26,12 @@
         "available": "5",
         "cover": "https://m.media-amazon.com/images/I/81bo3zfM2lL._AC_UF1000,1000_QL80_.jpg",
         "rating": "4.5/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "math",
+            "science"
+        ]
     },
     {
         "title": "A Collection of Problems on: Calculus 1",
@@ -33,7 +43,12 @@
         "available": "5",
         "cover": "https://m.media-amazon.com/images/I/61pqxjNOpML._AC_UF894,1000_QL80_.jpg",
         "rating": "4.5/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "math",
+            "firstyear"
+        ]
     },
     {
         "title": "Introductory Chemistry: 1st Canadian Edition",
@@ -45,7 +60,12 @@
         "available": "5",
         "cover": "https://cdn.collection.bccampus.ca/assets/covers/textbooks/199/large_cover_textbook_199_6131cb38a7.jpg",
         "rating": "3/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "firstyear",
+            "science"
+        ]
     },
     {
         "title": "Data Structures and Algorithms",
@@ -57,7 +77,11 @@
         "available": "5",
         "cover": "https://m.media-amazon.com/images/I/71kBRLo8ZtL._AC_UF1000,1000_QL80_.jpg",
         "rating": "4/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "science"
+        ]
     },
     {
         "title": "The Language of Literature",
@@ -69,7 +93,11 @@
         "available": "5",
         "cover": "https://qph.cf2.quoracdn.net/main-qimg-2cf3e310a0423c78970fd9c986eb1e72.webp",
         "rating": "3.2/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "arts"
+        ]
     },
     {
         "title": "Introduction To Psychology",
@@ -81,7 +109,12 @@
         "available": "5",
         "cover": "https://open.maricopa.edu/app/uploads/sites/140/2021/04/cover-350x525.jpg",
         "rating": "4/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "arts",
+            "firstyear"
+        ]
     },
     {
         "title": "Principles of Social Psychology",
@@ -93,7 +126,11 @@
         "available": "5",
         "cover": "https://open.umn.edu/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTk2NiwicHVyIjoiYmxvYl9pZCJ9fQ==--ed42218197d20b865a35caa78b63422b3786e34b/Principles-of-Psychology-683x1024.jpg",
         "rating": "5/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "arts"
+        ]
     },
     {
         "title": "Abnormal Psychology",
@@ -105,7 +142,11 @@
         "available": "5",
         "cover": "https://m.media-amazon.com/images/I/512mkQLXZVL._AC_UF1000,1000_QL80_.jpg",
         "rating": "4.2/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "arts"
+        ]
     },
     {
         "title": "Introduction to Sociology",
@@ -117,7 +158,12 @@
         "available": "5",
         "cover": "https://m.media-amazon.com/images/I/616QTmEBv8L._AC_UF1000,1000_QL80_.jpg",
         "rating": "3.5/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "arts",
+            "firstyear"
+        ]
     },
     {
         "title": "Computer Architecture",
@@ -129,7 +175,11 @@
         "available": "10",
         "cover": "https://m.media-amazon.com/images/I/71zrCDfb73S._AC_UF1000,1000_QL80_.jpg",
         "rating": "2.5/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "science"
+        ]
     },
     {
         "title": "C++ for Beginners",
@@ -141,7 +191,11 @@
         "available": "5",
         "cover": "https://m.media-amazon.com/images/I/51iHcq94N4L._AC_UF1000,1000_QL80_.jpg",
         "rating": "2.4/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "science"
+        ]
     },
     {
         "title": "Guide to Assembly Language",
@@ -153,7 +207,11 @@
         "available": "19",
         "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/978-0-85729-271-1",
         "rating": "2.5/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "science"
+        ]
     },
     {
         "title": "University Physics",
@@ -165,7 +223,12 @@
         "available": "5",
         "cover": "https://m.media-amazon.com/images/I/81JNB5TQaIL._AC_UY327_FMwebp_QL65_.jpg",
         "rating": "3/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "science",
+            "firstyear"
+        ]
     },
     {
         "title": "Biology 11",
@@ -177,7 +240,11 @@
         "available": "5",
         "cover": "https://m.media-amazon.com/images/I/21xTkR5KLCL._AC_UY218_.jpg",
         "rating": "4.5/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "science"
+        ]
     },
     {
         "title": "Introduction to Probability",
@@ -189,7 +256,11 @@
         "available": "5",
         "cover": "https://m.media-amazon.com/images/I/518BjmDVFBL._AC_UY327_FMwebp_QL65_.jpg",
         "rating": "3.4/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "math"
+        ]
     },
     {
         "title": "Introduction to Quantum Mechanics: Third Edition",
@@ -201,7 +272,11 @@
         "available": "5",
         "cover": "https://m.media-amazon.com/images/I/81aR7Qg1pbL._AC_UY327_FMwebp_QL65_.jpg",
         "rating": "3.2/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "science"
+        ]
     },
     {
         "title": "Children's Sport and Exercise Medicine",
@@ -213,7 +288,11 @@
         "available": "5",
         "cover": "https://m.media-amazon.com/images/I/41FNflFtN5L._AC_UY327_FMwebp_QL65_.jpg",
         "rating": "3.2/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "science"
+        ]
     },
     {
         "title": "Neuroscience: Seventh Edition",
@@ -225,7 +304,11 @@
         "available": "29",
         "cover": "https://m.media-amazon.com/images/I/71rAa3rVzZL._AC_UY327_QL65_.jpg",
         "rating": "2/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "science"
+        ]
     },
     {
         "title": "Ecology: Fifth Edition",
@@ -237,7 +320,10 @@
         "available": "5",
         "cover": "https://m.media-amazon.com/images/I/917SbPEtQuL._AC_UY327_QL65_.jpg",
         "rating": "4/5",
-        "tags": []
+        "tags": [
+            "arts",
+            "popular"
+        ]
     },
     {
         "title": "Pesticides and the Environment",
@@ -249,7 +335,9 @@
         "available": "2",
         "cover": "https://static.wixstatic.com/media/bd30d6_052f461c520d4b9fba7d835bd0e4f1d9~mv2.jpg/v1/fill/w_560,h_746,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Pesticides-&-the-Environment-2022%201.jpg",
         "rating": "3.5/5",
-        "tags": []
+        "tags": [
+            "science"
+        ]
     },
     {
         "title": "Essentials of Practical Microbiology",
@@ -261,7 +349,9 @@
         "available": "5",
         "cover": "https://m.media-amazon.com/images/I/811oMrp6rnS._AC_UF894,1000_QL80_.jpg",
         "rating": "4.5/5",
-        "tags": []
+        "tags": [
+            "science"
+        ]
     },
     {
         "title": "Python Crash Course",
@@ -273,7 +363,11 @@
         "available": "5",
         "cover": "https://m.media-amazon.com/images/I/514cSQ0O9OL._AC_SR300,300.jpg",
         "rating": "3.5/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "science"
+        ]
     },
     {
         "title": "Clean Code: A Handbook of Agile Software Craftsmanship",
@@ -285,7 +379,11 @@
         "available": "5",
         "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1436202607i/3735293._UX160_.jpg",
         "rating": "",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "science"
+        ]
     },
     {
         "title": "Writing for Computer Science",
@@ -297,7 +395,11 @@
         "available": "95",
         "cover": "https://media.springernature.com/full/springer-static/cover-hires/book/978-0-85729-422-7",
         "rating": "3.5/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "science"
+        ]
     },
     {
         "title": "Linear Programming: Methods and Applications",
@@ -309,7 +411,11 @@
         "available": "5",
         "cover": "https://s.turbifycdn.com/aah/yhst-137970348157658/linear-programming-methods-and-applications-fifth-edition-21.gif",
         "rating": "3.5/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "science"
+        ]
     },
     {
         "title": "Distributed Computing: Principles, Algorithms,and Systems",
@@ -321,7 +427,11 @@
         "available": "5",
         "cover": "https://m.media-amazon.com/images/I/61QBU7EqTBL._AC_UF1000,1000_QL80_.jpg",
         "rating": "3.7/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "science"
+        ]
     },
     {
         "title": "Cloud Computing: Principles and Paradigms",
@@ -333,7 +443,11 @@
         "available": "8",
         "cover": "https://m.media-amazon.com/images/I/81wNmgxyrBL._AC_UF1000,1000_QL80_.jpg",
         "rating": "2.5/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "science"
+        ]
     },
     {
         "title": "Internet Computing: Principles of Distributed Systems and Emerging Internet-Based Technologies",
@@ -345,7 +459,11 @@
         "available": "5",
         "cover": "https://internet-computing.net/img/cover.jpg",
         "rating": "3.5/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "science"
+        ]
     },
     {
         "title": "Fundamentals of Software Engineering",
@@ -357,7 +475,11 @@
         "available": "5",
         "cover": "https://m.media-amazon.com/images/I/71y0gZ1LR0L._AC_UF894,1000_QL80_.jpg",
         "rating": "4.5/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "science"
+        ]
     },
     {
         "title": "Software Engineering 2",
@@ -369,7 +491,11 @@
         "available": "5",
         "cover": "https://m.media-amazon.com/images/I/41X6H8Cm16L._AC_UF1000,1000_QL80_.jpg",
         "rating": "4.9/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "science"
+        ]
     },
     {
         "title": "Introduction to Cyber Security: Guide to the World of Cyber Security",
@@ -381,6 +507,10 @@
         "available": "5",
         "cover": "https://cdn.kobo.com/book-images/f7a1c600-1b59-4ae7-94e7-e429d56b8581/1200/1200/False/introduction-to-cyber-security.jpg",
         "rating": "3.5/5",
-        "tags": []
+        "tags": [
+            "popular",
+            "recommended",
+            "science"
+        ]
     }
 ]
