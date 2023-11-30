@@ -25,6 +25,8 @@
           </div>
         </div>
       </v-sheet>
+      <v-footer color="accent"><v-spacer></v-spacer>2023 - PEAKS LLC</v-footer>
+
     </v-main>
   </v-app>
 </template>
@@ -34,6 +36,7 @@
 .content {
   padding-left: 40px;
   padding-right: 40px;
+  min-height: 100vh
 }
 
 .search-results {
@@ -70,6 +73,13 @@
   border-radius: 2rem;
 }
 
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 
 </style>
 
