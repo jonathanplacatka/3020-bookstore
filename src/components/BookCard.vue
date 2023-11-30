@@ -16,6 +16,12 @@
             width=60%
         >
           <v-card>
+            <v-card-item>
+              <v-btn icon="$close" variant="text" @click="dialog = false" style="position: absolute; top: 0; right: 0;"></v-btn>
+            <!-- <v-btn variant="text" rounded="xl" density="compact" @click="dialog = false" style="position: absolute; top: 10; right: 0;">
+            <v-icon>mdi-close</v-icon>
+            </v-btn> -->
+          </v-card-item>
             <v-card-title> {{ book.title }} </v-card-title>
             <v-card-text>
               <div style="display: flex; font-size:12px; width: 100%;">
@@ -48,19 +54,18 @@
                     <strong>Units available:</strong> {{ book.available }}
                  </div>
                 </div>
-                <div>
+                <div style="flex: 100%; display: flex; justify-content: space-between; align-items: flex-end; padding-top: 12px;">
+            <div>
+              <input type="radio" id="physical" value="physical" name="type-of-book" />
+              <label for="physical">Physical:&emsp;${{ book.price }}</label><br>
 
-                  <input type="radio" id="physical" value="physical" name="type-of-book"/>
-                  <label for="physical">Physical:&emsp;${{ book.price }}</label><br>
-
-                  <input type="radio" id="digital" value="digital"  name="type-of-book"/>
-                  <label for="digital">Digital:&emsp;${{(book.price *0.66).toFixed(2)}}</label><br>
-
-                </div>
-
-                <v-btn @click="addToCart()">
-                  Add to Cart
-                </v-btn>
+              <input type="radio" id="digital" value="digital" name="type-of-book" />
+              <label for="digital">Digital:&emsp;${{(book.price * 0.66).toFixed(2)}}</label>
+            </div>
+            
+            <v-btn @click="addToCart()">Add to Cart</v-btn>
+          </div>
+      
             </v-card-text>
             <v-card-actions>
               <v-btn color="primary" block @click="dialog = false">Close Dialog</v-btn>
