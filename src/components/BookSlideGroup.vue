@@ -5,8 +5,7 @@
     <h2>{{ title }}</h2>
 
     <v-slide-group
-      selected-class="bg-success"
-      show-arrows
+      show-arrows="always"
     >
       <v-slide-group-item>
         <BookCard 
@@ -16,6 +15,7 @@
         />
       </v-slide-group-item>
     </v-slide-group>
+
   </v-sheet>
 </template>
 
@@ -33,6 +33,10 @@
       }
     }
   }
-
-  
 </script>
+
+<style>
+  .v-slide-group__next, .v-slide-group__prev {
+    height: 260px !important;   
+  }
+</style>

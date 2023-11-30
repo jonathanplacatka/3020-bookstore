@@ -1,58 +1,70 @@
 <template>
   <div class="clearfix">
-    <v-card class="ma-4" hover width="140" height="200" elevation="0" :image="book.cover" link>
+    <v-card elevation="0" width="140" height="270" class="ma-4">
+      <v-card
+        hover
+        width="140"
+        height="200"
+        elevation="0"
+        :image="book.cover"
+        link
+      >
 
-      <v-dialog v-model="dialog" activator="parent" width=60%>
-        <v-card>
-          <v-card-title> {{ book.title }} </v-card-title>
-          <v-card-text>
-
-            <div style="display: flex; font-size:12px; width: 100%;">
-              <div style="flex: 40%; padding-right: 16px;">
-                <img :src=book.cover class="custom-image">
-                <strong>{{ book.rating }}&nbsp</strong>
-                <v-rating half-increments hover readonly :length="5" :size="13" :model-value=book.rating
-                  active-color="warning" />
-              </div>
-
+        <v-dialog
+            v-model="dialog"
+            activator="parent"
+            width=60%
+        >
+          <v-card>
+            <v-card-title> {{ book.title }} </v-card-title>
+            <v-card-text>
               <div style="display: flex; font-size:12px; width: 100%;">
-                <div style="flex: 40%; padding-right: 16px;">
-                  <img :src=book.cover class="custom-image">
-                  <strong>{{ book.rating }}&nbsp</strong>
-                  <v-rating half-increments hover readonly :length="5" :size="13" :model-value=book.rating
-                    active-color="warning" density="auto" />
+                <div style="flex: 40%; padding-right: 16px;"> 
+                    <img :src=book.cover class="custom-image">
+                    <strong>{{ book.rating }}&nbsp</strong> 
+                    <v-rating
+                    half-increments
+                    hover
+                    readonly
+                    :length="5"
+                    :size="13"
+                    :model-value=book.rating
+                    active-color="warning"
+                    />
                 </div>
 
                 <div style="flex: 60%; font-size: 14px;">
                   <br>
-                  <strong>Author:</strong> {{ book.author }}
+                    <strong>Author:</strong> {{ book.author }}
                   <br>
-                  <strong>ISBN:</strong> {{ book.isbn }}
+                    <strong>ISBN:</strong> {{ book.isbn }}
                   <br>
-                  <strong>Edition:</strong> {{ book.edition }}
+                    <strong>Edition:</strong> {{ book.edition }}
                   <br>
-                  <strong>Year:</strong> {{ book.year }}
+                    <strong>Year:</strong> {{ book.year }}
                   <br>
-                  <strong>Price:</strong> {{ book.price }}
+                    <strong>Price:</strong> {{ book.price }}
                   <br>
-                  <strong>Units available:</strong> {{ book.available }}
+                    <strong>Units available:</strong> {{ book.available }}
+                 </div>
                 </div>
-              </div>
-            </div>
-            <v-btn @click="addToCart()">
-              Add to Cart
-            </v-btn>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn color="primary" block @click="dialog = false">Close Dialog</v-btn>
-          </v-card-actions>
-        </v-card>
+                <v-btn @click="addToCart()">
+                  Add to Cart
+                </v-btn>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn color="primary" block @click="dialog = false">Close Dialog</v-btn>
+            </v-card-actions>
+          </v-card>
       </v-dialog>
-
+    </v-card>
+    <div class="sub-text">
+      <p class="book-title">{{ book.title }}</p>
+      <p class="author"><i>{{ book.author }}</i></p> 
+    </div>
     </v-card>
   </div>
 </template>
-
 
 <script>
 export default {
@@ -87,5 +99,30 @@ export default {
   height: 200px;
   object-fit: contain;
   object-position: left;
+}
+
+.sub-text {
+  margin-top: 4px;
+  text-align: center;
+}
+
+.book-title  {
+  width: 140px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  color: black;
+
+}
+
+.author {
+  width: 140px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  color: grey;
+  font-size: 14px;
 }
 </style>
