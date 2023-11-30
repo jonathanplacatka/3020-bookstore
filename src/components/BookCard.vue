@@ -48,6 +48,16 @@
                     <strong>Units available:</strong> {{ book.available }}
                  </div>
                 </div>
+                <div>
+
+                  <input type="radio" id="physical" value="physical" name="type-of-book"/>
+                  <label for="physical">Physical:&emsp;${{ book.price }}</label><br>
+
+                  <input type="radio" id="digital" value="digital"  name="type-of-book"/>
+                  <label for="digital">Digital:&emsp;${{(book.price *0.66).toFixed(2)}}</label><br>
+
+                </div>
+
                 <v-btn @click="addToCart()">
                   Add to Cart
                 </v-btn>
@@ -67,6 +77,7 @@
 </template>
 
 <script>
+
 export default {
   props: ['book'],
   data: () => ({
