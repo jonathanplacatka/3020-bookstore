@@ -9,22 +9,19 @@
         <input v-model="searchInput" @keydown.enter.prevent="doSearch" placeholder="Search" class="input-style" />
       </div>
 
-      <v-sheet
-        class="mx-10"
-        elevation="0"
-      >
+      <v-sheet class="mx-10" elevation="0">
         <div v-if="showHomepage">
-          <BookSlideGroup title="Popular" tag="popular"/>
-          <BookSlideGroup title="Recommended" tag="recommended"/>
-          <BookSlideGroup title="First-Year" tag="firstyear"/>
-          <BookSlideGroup title="Math" tag="math"/>
-          <BookSlideGroup title="Arts" tag="arts"/>
-          <BookSlideGroup title="Sciences" tag="science"/>
+          <BookSlideGroup title="Popular" tag="popular" />
+          <BookSlideGroup title="Recommended" tag="recommended" />
+          <BookSlideGroup title="First-Year" tag="firstyear" />
+          <BookSlideGroup title="Math" tag="math" />
+          <BookSlideGroup title="Arts" tag="arts" />
+          <BookSlideGroup title="Sciences" tag="science" />
         </div>
-        <div v-else>
+        <div v-else class="search-results-container">
           <h2> Search Results</h2>
           <div class="search-results">
-            <BookCard v-for="(item, index) in searchResults" :key="index" :book="item" :title="props.title"/>
+            <BookCard v-for="(item, index) in searchResults" :key="index" :book="item" :title="props.title" />
           </div>
         </div>
       </v-sheet>
@@ -53,12 +50,9 @@
 .search-results {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  padding: 1rem;
-  margin: 1rem;
 }
 
-h2 {
+.search-results-container {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   margin-left: 3rem;
