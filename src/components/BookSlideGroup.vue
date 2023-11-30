@@ -2,11 +2,12 @@
   <v-sheet
     elevation="0"
   >
-    <h2>{{ title }}</h2>
-
+   
+    <h2 class="category">{{ title }}</h2>
     <v-slide-group
       show-arrows="always"
     >
+
       <v-slide-group-item>
         <BookCard 
           v-for="(item, index) in filtered"
@@ -39,4 +40,13 @@
   .v-slide-group__next, .v-slide-group__prev {
     height: 260px !important;   
   }
+
+
+</style>
+
+<style scoped>
+  .category {
+    margin-left: 67px;
+  }
+
 </style>

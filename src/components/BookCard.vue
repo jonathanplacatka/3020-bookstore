@@ -1,6 +1,6 @@
 <template>
   <div class="clearfix">
-    <v-card elevation="0" width="140" height="270" class="ma-4">
+    <v-card elevation="0" width="140" height="270" class="mx-4 my-2">
       <v-card
         hover
         width="140"

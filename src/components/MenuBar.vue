@@ -2,8 +2,6 @@
       <!-- Menu Bar -->
       <v-app-bar color="primary" elevation="0">
           <v-app-bar-nav-icon color="white"/>
-
-          <v-spacer></v-spacer>
           <a href="/" v-on:click="showHomepage.value = true" style="align-items: center;">
             <img src="src\assets\Peaks_Logo_3.png" style="height:100px">
           </a>

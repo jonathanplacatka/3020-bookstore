@@ -13,7 +13,7 @@
         class="mx-10"
         elevation="0"
       >
-        <div v-if="showHomepage">
+        <div class="categories" v-if="showHomepage">
           <BookSlideGroup title="Popular" tag="popular"/>
           <BookSlideGroup title="Recommended" tag="recommended"/>
           <BookSlideGroup title="First-Year" tag="firstyear"/>
@@ -30,11 +30,21 @@
       </v-sheet>
 
     </v-main>
+    <v-footer color="accent">
+      <v-spacer></v-spacer>
+      <p>2023 - <b>PEAKS</b></p>
+    </v-footer>
   </v-app>
 </template>
 
 
 <style scoped>
+
+.categories {
+  display:flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
 .search-box {
   display: flex;
   justify-content: center;
@@ -64,6 +74,7 @@ h2 {
   margin-left: 3rem;
   padding-left: 3rem;
 }
+
 </style>
 
 
