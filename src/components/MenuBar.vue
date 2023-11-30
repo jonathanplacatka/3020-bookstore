@@ -14,8 +14,8 @@
       </v-btn>
 
 
-     <v-btn color="white" icon  id="cart">
-      <v-badge color="red" :content="totalItems" :model-value="totalItems > 0" class="pulse mr-3">
+     <v-btn color="white" icon id="cart">
+      <v-badge color="red" :content="totalItems" :model-value="totalItems > 0" class="pulse">
         <v-icon icon="mdi-cart" color="white" size="large" class=""></v-icon>
       </v-badge>
 
