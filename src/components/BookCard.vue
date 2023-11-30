@@ -53,7 +53,7 @@
                 </div>
                 <div style="flex: 100%; display: flex; justify-content: space-between; align-items: flex-end; padding-top: 12px;">
             <div>
-              <input type="radio" id="physical" value="physical" name="type-of-book" />
+              <input type="radio" id="physical" value="physical" name="type-of-book" checked="true" />
               <label for="physical">Physical:&emsp;${{ book.price }}</label><br>
 
               <input type="radio" id="digital" value="digital" name="type-of-book" />
