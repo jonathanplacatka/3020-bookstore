@@ -5,11 +5,8 @@
       <MenuBar />
 
       <div class="search-box">
-
         <!-- does searching of the input when enter or search icon is pressed -->
         <input v-model="searchInput" @keydown.enter.prevent="doSearch" placeholder="Search" class="input-style" />
-
-
       </div>
 
       <v-sheet
@@ -56,10 +53,9 @@
 .search-results {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   padding: 1rem;
   margin: 1rem;
-  justify-content: center;
-  align-items: center;
 }
 
 h2 {

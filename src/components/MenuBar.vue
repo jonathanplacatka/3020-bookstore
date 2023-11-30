@@ -46,7 +46,7 @@
                     :key="item.book.title"
                     class="mb-2"
                   >
-                    <v-list-item-title class="text-left">{{ item.book.title }} - <b>${{ item.book.price*item.quantity }}</b> </v-list-item-title>
+                    <v-list-item-title class="text-left">{{ item.book.title }} - <b>${{ (item.book.price*item.quantity).toFixed(2) }}</b> </v-list-item-title>
               
                     <v-btn-group density="compact" divided variant="outlined" class ="ml-6">
                       <v-btn :ripple="false" icon="mdi-minus"  @click="decrement(i)"></v-btn>
@@ -110,7 +110,7 @@
       totalPrice() {
         let sum = 0;
         this.items.forEach(item => (sum += (item.book.price*item.quantity)))
-        return sum;
+        return sum.toFixed(2);
       },
 
     },
