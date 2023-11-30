@@ -28,7 +28,7 @@
         <div v-else>
           <h2> Search Results</h2>
           <div class="search-results">
-            <BookCard v-for="(item, index) in searchResults" :key="index" :book="item" :title="props.title" />
+            <BookCard v-for="(item, index) in searchResults" :key="index" :book="item" :title="props.title"/>
           </div>
         </div>
       </v-sheet>
@@ -57,7 +57,6 @@
 .search-results {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
   padding: 1rem;
   margin: 1rem;
 }
