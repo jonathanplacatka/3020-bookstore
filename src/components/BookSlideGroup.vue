@@ -40,8 +40,6 @@
   .v-slide-group__next, .v-slide-group__prev {
     height: 260px !important;   
   }
-
-
 </style>
 
 <style scoped>

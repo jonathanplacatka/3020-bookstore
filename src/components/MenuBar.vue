@@ -8,14 +8,15 @@
     </a>
     <v-spacer></v-spacer>
 
-    <v-btn color="white" icon>
-      <v-icon icon="mdi-account" color="white" size="large" id="menu-activator"></v-icon>
-    </v-btn>
+ 
+      <v-btn color="white" icon>
+        <v-icon icon="mdi-account" color="white" size="large" id="menu-activator"></v-icon>
+      </v-btn>
 
 
-    <v-btn color="white" icon>
-      <v-badge color="red" :content="totalItems" :model-value="totalItems > 0">
-        <v-icon icon="mdi-cart" color="white" size="large" id="menu-activator"></v-icon>
+     <v-btn color="white" icon  id="cart">
+      <v-badge color="red" :content="totalItems" :model-value="totalItems > 0" class="pulse mr-3">
+        <v-icon icon="mdi-cart" color="white" size="large" class=""></v-icon>
       </v-badge>
 
 
@@ -64,7 +65,7 @@
 <script>
 export default {
   data: () => ({
-    items: []
+    items: [],
   }),
   mounted() {
     this.emitter.on("add-to-cart", book => {
@@ -125,4 +126,5 @@ export default {
 .disable-events {
   pointer-events: none;
 }
+
 </style>

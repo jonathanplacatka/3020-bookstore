@@ -2,7 +2,7 @@
   <v-app>
     <v-main>
 
-      <MenuBar />
+      <MenuBar/>
 
       <div class="search-box">
         <!-- does searching of the input when enter or search icon is pressed -->

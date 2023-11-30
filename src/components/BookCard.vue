@@ -76,6 +76,12 @@ export default {
     addToCart() {
       this.emitter.emit('add-to-cart', this.book);
       this.dialog = false;
+      
+      document.getElementById('cart').animate(
+        [{ transform: "scale(1)"}, {transform: "scale(1.3)"},  {transform: "scale(1)"}], 
+        {delay: 200, duration: 600, iterations:1}
+      );
+
     }
   }
 }
