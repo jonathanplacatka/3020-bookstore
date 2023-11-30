@@ -1,14 +1,13 @@
 <template>
   <v-app>
     <v-main>
+
       <MenuBar />
-      <!-- <SearchBar /> -->
 
       <div class="search-box">
 
         <!-- does searching of the input when enter or search icon is pressed -->
-        <input v-model="searchInput" @input="onSearchInput" @keydown.enter.prevent="doSearch" placeholder="Search"
-          class="input-style" />
+        <input v-model="searchInput" @keydown.enter.prevent="doSearch" placeholder="Search" class="input-style" />
 
 
       </div>
@@ -59,6 +58,15 @@
   flex-wrap: wrap;
   padding: 1rem;
   margin: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  margin-left: 3rem;
+  padding-left: 3rem;
 }
 </style>
 
@@ -69,7 +77,6 @@ import MenuBar from '@/components/MenuBar.vue'
 import BookCard from '@/components/BookCard.vue'
 import books from '@/assets/books.json'
 
-import SearchBar from '@/components/SearchBar.vue'
 import { ref } from 'vue'
 import { computed } from '@vue/reactivity'
 
@@ -84,7 +91,7 @@ const doSearch = () => {
 
 const props = defineProps(['title']);
 
-
+// gets all the books that match the search input value
 const searchResults = computed(() => {
   const searchInputLowerCase = searchInput.value.toLowerCase();
 
