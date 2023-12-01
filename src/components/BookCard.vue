@@ -103,8 +103,8 @@ export default {
       console.log(isPhysical) 
       
       document.getElementById('cart').animate(
-        [{ transform: "scale(1)"}, {transform: "scale(1.25)"},  {transform: "scale(1)"}], 
-        {delay: 200, duration: 600, iterations:1}
+        [{ transform: "scale(1)"}, {transform: "scale(1.3)"},  {transform: "scale(1)"}], 
+        {delay: 200, duration: 400, iterations:1}
       );
 
     }
