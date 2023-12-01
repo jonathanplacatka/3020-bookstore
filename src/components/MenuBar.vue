@@ -39,8 +39,7 @@
               </v-list-item>
 
               <v-list-item v-for="(item, i) in items" :key="item.book.title" class="mb-2">
-                <v-list-item-title class="text-left">{{ item.book.title }} - <b>${{
-                  (item.book.price * item.quantity).toFixed(2) }}</b> </v-list-item-title>
+                <v-list-item-title class="text-left">{{ item.book.title }} <span v-if="!item.isPhysical">(Digital)</span> - <b>${{(item.selectedPrice * item.quantity).toFixed(2) }}</b> </v-list-item-title>
 
                 <v-btn-group density="compact" divided variant="outlined" class="ml-6">
                   <v-btn :ripple="false" icon="mdi-minus" @click="decrement(i)"></v-btn>
@@ -77,8 +76,8 @@ export default {
   isCartOpen: false,
   }),
   mounted() {
-    this.emitter.on("add-to-cart", book => {
-      this.addItem(book)
+    this.emitter.on("add-to-cart", bookData => {
+      this.addItem(bookData.book, bookData.isPhysical, bookData.selectedPrice)
     });
   },
   created() {
@@ -102,18 +101,18 @@ export default {
 
     totalPrice() {
       let sum = 0;
-      this.items.forEach(item => (sum += (item.book.price * item.quantity)))
+      this.items.forEach(item => (sum += (item.selectedPrice * item.quantity)))
       return sum.toFixed(2);
     },
 
   },
   methods: {
-    addItem(book) {
-      let result = this.items.find(item => item.book.title === book.title)
+    addItem(book, isPhysical, selectedPrice) {
+      let result = this.items.find(item => (item.book.title === book.title && item.isPhysical == isPhysical))
       if (result) {
         result.quantity++
       } else {
-        this.items.push({ book: book, quantity: 1 })
+        this.items.push({book: book, quantity: 1, isPhysical: isPhysical, selectedPrice: selectedPrice})
       }
     },
 

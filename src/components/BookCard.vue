@@ -1,5 +1,5 @@
 <template>
-  <div class="clearfix">
+  <div>
     <v-card elevation="0" width="140" height="270" class="mx-4 my-2">
       <v-card
         hover
@@ -13,57 +13,70 @@
         <v-dialog
             v-model="dialog"
             activator="parent"
-            width=60%
+            width=40%
         >
-          <v-card>
+          <v-card class="content">
             <v-card-item>
-              <v-card-title> {{ book.title }} </v-card-title>
-              <v-btn icon="$close" variant="text" @click="dialog = false" style="position: absolute; top: 0; right: 0;"></v-btn>
+              <v-btn icon="$close" variant="text" @click="dialog = false" style="position: absolute; top: 2px; right: 2px;"></v-btn>
             </v-card-item>
-            <v-card-text class="mx-3 my-3">
-              <div style="display: flex; font-size:12px; width: 100%;">
-                <div style="flex: 40%; padding-right: 16px;"> 
-                    <img :src=book.cover class="custom-image">
-                    <strong>{{ book.rating }}&nbsp</strong> 
-                    <v-rating
-                    half-increments
-                    hover
-                    readonly
-                    :length="5"
-                    :size="13"
-                    :model-value=book.rating
-                    active-color="warning"
-                    />
-                </div>
+            
+            <v-card-item>
+              <h2> {{ book.title }}</h2>
+            </v-card-item>
 
-                <div style="flex: 60%; font-size: 14px;">
+            <div>
+            </div>
+  
+            
+            <v-card-text class="book-details-container">
+                
+                <img :src=book.cover class="custom-image">
+
+                <div class="book-details-text">
                   <br>
                     <strong>Author:</strong> {{ book.author }}
                   <br>
                     <strong>ISBN:</strong> {{ book.isbn }}
                   <br>
-                    <strong>Edition:</strong> {{ book.edition }}
-                  <br>
                     <strong>Year:</strong> {{ book.year }}
                   <br>
-                    <strong>Price:</strong> {{ book.price }}
+                  <strong>Rating: </strong>
                   <br>
-                    <strong>Units available:</strong> {{ book.available }}
+                    <v-rating
+                    half-increments
+                    hover
+                    readonly
+                    :length="5"
+                    :size="20"
+                    :model-value=book.rating
+                    active-color="warning"
+                    />
+                  <br>
+                  
                  </div>
-                </div>
-                <div style="flex: 100%; display: flex; justify-content: space-between; align-items: flex-end; padding-top: 12px;">
-            <div>
-              <input type="radio" id="physical" value="physical" name="type-of-book" checked="true" />
-              <label for="physical">Physical:&emsp;${{ book.price }}</label><br>
+              </v-card-text>
 
-              <input type="radio" id="digital" value="digital" name="type-of-book" />
-              <label for="digital">Digital:&emsp;${{book.eprice}}</label>
-            </div>
-            
-            <v-btn @click="addToCart()">Add to Cart</v-btn>
-          </div>
+              <v-divider class="mx-5 mt-4"></v-divider>
+
+              <div class="bottom-container">
+
+                <div class="price-selector">
+                  <input type="radio" id="physical" value="physical" name="type-of-book" checked/>
+                  <label for="physical"> Physical: ${{ book.price }}</label><br>
+
+                  <input type="radio" id="digital" value="digital" name="type-of-book" />
+                  <label for="digital"> Digital: ${{book.eprice}}</label>
+                </div>
+
+
+                  <v-spacer></v-spacer>
+                  <v-btn class="cart-button" elevation="0" color="secondary" @click="addToCart()">Add to Cart</v-btn>
+              
+          
+                  
+              </div>
       
-            </v-card-text>
+
           </v-card>
       </v-dialog>
     </v-card>
@@ -84,8 +97,12 @@ export default {
   }),
   methods: {
     addToCart() {
-      this.emitter.emit('add-to-cart', this.book);
+      let isPhysical = document.querySelector('input[name=type-of-book]:checked').value == 'physical'
+      let selectedPrice = isPhysical ? this.book.price : this.book.eprice
+      this.emitter.emit('add-to-cart', {book: this.book, isPhysical: isPhysical, selectedPrice: selectedPrice});
       this.dialog = false;
+
+      console.log(isPhysical) 
       
       document.getElementById('cart').animate(
         [{ transform: "scale(1)"}, {transform: "scale(1.25)"},  {transform: "scale(1)"}], 
@@ -98,23 +115,43 @@ export default {
 </script>
 
 <style scoped>
-.column {
 
-  margin: 1%;
-  float: left;
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+.book-details-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.book-details-text {
+  font-size: 18px;
+  margin-left: 35px;
+}
+
+.bottom-container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  margin: 20px
+}
+
+.price-selector {
+  font-size: 18px;
+}
+
+.cart-button {
+  margin-top: 9px;
 }
 
 .custom-image {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-  object-position: left;
+  width: 175px;
+  height: 250px;
 }
 
 .sub-text {
@@ -129,7 +166,6 @@ export default {
   -webkit-line-clamp: 2;
   overflow: hidden;
   color: black;
-
 }
 
 .author {
