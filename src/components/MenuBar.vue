@@ -8,15 +8,13 @@
     </a>
     <v-spacer></v-spacer>
     
-    <!-- <div class="d-flex align-left"> -->
-      <!-- <a href="/" v-on:click="showHomepage.value = true">
-        <img src="src\assets\Peaks_Logo_3-removebg-preview.png" style="height: 100px" />
-      </a> -->
-      <!-- <span class="mx-2 text-h4">Peaks Bookstore</span> -->
-    <!-- </div> -->
-    <!-- <v-spacer></v-spacer> -->
+    <h1 style="font-family: Caslon; margin-left: 10px; text-align: center; font-variant: small-caps;">Peaks Bookstore</h1>
+    <v-spacer></v-spacer>
 
- 
+
+    <v-btn color="white" icon>
+      <v-icon icon="mdi-home" color="white" size="large"></v-icon>
+    </v-btn>
       <v-btn color="white" icon>
         <v-icon icon="mdi-account" color="white" size="large" id="menu-activator"></v-icon>
       </v-btn>
