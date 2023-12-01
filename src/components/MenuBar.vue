@@ -3,9 +3,9 @@
   <!-- Menu Bar -->
   <v-app-bar color="primary" elevation="0">
     <v-app-bar-nav-icon color="white" />
-    
-    <div style="cursor: pointer;" @click="this.$emit('home')">
-      <img src="\src\assets\Peaks_Logo_3-removebg-preview.png" style="height:100px" > 
+
+    <div style="cursor: pointer; align-items: center;" @click="this.$emit('home')">
+      <img src="\src\assets\Logo-text-white.png" style="height:50px"  > 
     </div>  
 
     <v-spacer></v-spacer>
