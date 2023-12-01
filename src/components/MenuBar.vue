@@ -7,8 +7,6 @@
     <div style="cursor: pointer; align-items: center;" @click="this.$emit('home')">
       <img src="\src\assets\Logo-text-white.png" style="height:50px"  > 
     </div>  
-
-    <v-spacer></v-spacer>
     
     <h1 style="font-family: Caslon; margin-left: 10px; text-align: center; font-variant: small-caps;">Peaks Bookstore</h1>
     <v-spacer></v-spacer>
