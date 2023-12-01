@@ -1,5 +1,5 @@
 # Running the Website
-Our website requires .the browser to be started with a security  flag to run correctly 
+our website requires the browser to be started with a security  flag to run correctly 
 
 **NOTE: ALL CHROME INSTANCES MUST BE CLOSED BEFOREHAND**
 
