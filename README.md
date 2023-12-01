@@ -1,11 +1,14 @@
-# Browser Flags
-
-our website requires the browser to be started with a flag to run correctly:
+# Running the Website
+Our website requires .the browser to be started with a security  flag to run correctly 
 
 **NOTE: ALL CHROME INSTANCES MUST BE CLOSED BEFOREHAND**
 
+## Windows
 
-- navigate to `chrome.exe` (example: `C:\Program Files\Google\Chrome\Application`)
+- close any open chrome windows
+
+- navigate to `chrome.exe` 
+ `C:\Program Files\Google\Chrome\Application`)
 
 - open command line  in this location (in file explorer, right click -> Open in Terminal)
 
@@ -13,8 +16,21 @@ our website requires the browser to be started with a flag to run correctly:
 
 - this will open a new chrome window with the flag set. Without closing this window, double click the `index.html` file to open in chrome
 
+## macOS
+
+- close any open chrome windows
+
+- navigate to `Applications` folder
+
+- open terminal in this location (right click -> open folder in terminal)
+
+- run the following command: `open Chrome.app --args--allow-file-access-from-files`
+
+- this will open a new chrome window with the flag set. Without closing this window, double click the `index.html` file to open in chrome
+
+
 # File Structure
 
-- use the compiled `index.html` file provided in the root submission directory to open the website
+- open the compiled `index.html` file located in the root project directory using the instructions above. 
 
-- source files are provided in the `/bookstore` folder for reference. do not attempt to directly open these files in the browser as they are not compiled.
+- original source files are provided in the `source-files` folder for reference. do not attempt to directly open these files in the browser as they are not compiled.
