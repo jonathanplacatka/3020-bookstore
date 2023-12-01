@@ -3,14 +3,18 @@
   <!-- Menu Bar -->
   <v-app-bar color="primary" elevation="0">
     <v-app-bar-nav-icon color="white" />
+    <a href="/" v-on:click="showHomepage.value = true" style="align-items: center;">
+      <img src="src\assets\Peaks_Logo_3-removebg-preview.png" style="height:100px">
+    </a>
     <v-spacer></v-spacer>
-    <div class="d-flex align-center">
-      <a href="/" v-on:click="showHomepage.value = true">
+    
+    <!-- <div class="d-flex align-left"> -->
+      <!-- <a href="/" v-on:click="showHomepage.value = true">
         <img src="src\assets\Peaks_Logo_3-removebg-preview.png" style="height: 100px" />
-      </a>
-      <span class="mx-2 text-h4">Peaks Bookstore</span>
-    </div>
-    <v-spacer></v-spacer>
+      </a> -->
+      <!-- <span class="mx-2 text-h4">Peaks Bookstore</span> -->
+    <!-- </div> -->
+    <!-- <v-spacer></v-spacer> -->
 
  
       <v-btn color="white" icon>
