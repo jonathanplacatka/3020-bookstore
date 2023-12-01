@@ -107,7 +107,7 @@
     },
     {
       "title": "Introduction To Psychology",
-      "author": "N/A",
+      "author": "Julie Lazzara",
       "isbn": "900-061444369",
       "edition": "8th",
       "year": "2005",
@@ -125,7 +125,7 @@
     },
     {
       "title": "Principles of Social Psychology",
-      "author": "N/A",
+      "author": "Tonja R. Conerly, Kathleen Holmes, Asha Lal Tamang",
       "isbn": "9378-06129369",
       "edition": "8th",
       "year": "2005",
@@ -159,7 +159,7 @@
     },
     {
       "title": "Introduction to Sociology",
-      "author": "N/A",
+      "author": "Asha Lal Tamang, Kathleen Holmes, Tonja R. Conerly",
       "isbn": "4061444369",
       "edition": "9",
       "year": "2005",
@@ -246,7 +246,7 @@
     },
     {
       "title": "Biology 11",
-      "author": "N/A",
+      "author": "Douglas Fraser Jacqueline Dulson, Maurice Digiuseppe",
       "isbn": "12343414780",
       "edition": "8th",
       "year": "2005",
@@ -425,23 +425,6 @@
         "science"
       ],
       "eprice": "47.51"
-    },
-    {
-      "title": "Linear Programming: Methods and Applications",
-      "author": "Saul I. Gass",
-      "isbn": "1749738592",
-      "edition": "8th",
-      "year": "2005",
-      "price": "49.99",
-      "available": "5",
-      "cover": "https://s.turbifycdn.com/aah/yhst-137970348157658/linear-programming-methods-and-applications-fifth-edition-21.gif",
-      "rating": "3.5/5",
-      "tags": [
-        "popular",
-        "recommended",
-        "science"
-      ],
-      "eprice": "32.99"
     },
     {
       "title": "Distributed Computing: Principles, Algorithms, and Systems",
@@ -947,7 +930,7 @@
     },
     {
       "title": "Introduction to the Foundations of Mathematics",
-      "author": "N/A",
+      "author": "Raymond Louis Wilder",
       "isbn": "6573934757905700",
       "edition": "2nd",
       "year": "2013",
