@@ -7,6 +7,14 @@
       <img src="src\assets\Peaks_Logo_3-removebg-preview.png" style="height:100px">
     </a>
     <v-spacer></v-spacer>
+    
+    <!-- <div class="d-flex align-left"> -->
+      <!-- <a href="/" v-on:click="showHomepage.value = true">
+        <img src="src\assets\Peaks_Logo_3-removebg-preview.png" style="height: 100px" />
+      </a> -->
+      <!-- <span class="mx-2 text-h4">Peaks Bookstore</span> -->
+    <!-- </div> -->
+    <!-- <v-spacer></v-spacer> -->
 
  
       <v-btn color="white" icon>
@@ -21,8 +29,12 @@
 
 
       <!-- Cart -->
-      <v-menu transition="slide-y-transition" activator="parent" :close-on-content-click="false">
+      <v-menu v-model="isCartOpen" transition="slide-y-transition" activator="parent" :close-on-content-click="false">
         <v-card class="pa-2">
+          <v-card-title class="text-center">
+            Cart
+            <v-btn icon="$close" variant="text" @click="isCartOpen = false" style="position: absolute; top: 0; right: 0;"></v-btn></v-card-title>
+            <v-divider></v-divider>
           <v-row align="start" no-gutters>
             <v-list>
 
@@ -65,6 +77,7 @@
 export default {
   data: () => ({
     items: [],
+  isCartOpen: false,
   }),
   mounted() {
     this.emitter.on("add-to-cart", bookData => {
