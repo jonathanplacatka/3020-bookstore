@@ -3,18 +3,19 @@
   <!-- Menu Bar -->
   <v-app-bar color="primary" elevation="0">
     <v-app-bar-nav-icon color="white" />
-    <a href="/" v-on:click="showHomepage.value = true" style="align-items: center;">
-      <img src="src\assets\Peaks_Logo_3-removebg-preview.png" style="height:100px">
-    </a>
+    
+    <div style="cursor: pointer;" @click="this.$emit('home')">
+      <img src="\src\assets\Peaks_Logo_3-removebg-preview.png" style="height:100px" > 
+    </div>  
+
     <v-spacer></v-spacer>
     
     <h1 style="font-family: Caslon; margin-left: 10px; text-align: center; font-variant: small-caps;">Peaks Bookstore</h1>
     <v-spacer></v-spacer>
 
-    <a href="/" v-on:click="showHomepage.value = true" style="align-items: center;">
     <v-btn color="white" icon>
-      <v-icon icon="mdi-home" color="white" size="large"></v-icon>
-    </v-btn></a>
+      <v-icon icon="mdi-home" color="white" size="large" @click="this.$emit('home')"></v-icon>
+    </v-btn>
       <v-btn color="white" icon> 
         <v-icon icon="mdi-account" color="white" size="large" id="menu-activator"></v-icon>
       </v-btn>
@@ -127,7 +128,8 @@ export default {
       if (this.items[index].quantity == 0) {
         this.items.splice(index, 1)
       }
-    }
+    },
+
   }
 }
 </script>

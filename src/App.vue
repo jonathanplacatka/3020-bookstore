@@ -2,7 +2,7 @@
   <v-app>
     <v-main>
 
-      <MenuBar/>
+      <MenuBar @home="returnHome()"/>
       <!-- does searching of the input when enter or search icon is pressed -->
       <div class="search-box">      
         <v-text-field
@@ -29,7 +29,7 @@
           <BookSlideGroup title="Arts" tag="arts" />
           <BookSlideGroup title="Sciences" tag="science" />
         </div>
-        <div v-else class="">
+        <div v-else>
           <h2 class="search-header"> Search Results</h2>
           <div class="search-results">
             <BookCard v-for="(item, index) in searchResults" :key="index" :book="item" :title="props.title" />
@@ -97,7 +97,7 @@
   import books from '@/assets/books.json'
 
   import { ref } from 'vue'
- 
+
   const showHomepage = ref(true);
   const searchInput = ref('');
   const searchResults = ref([]);
@@ -111,7 +111,11 @@
       book.title.toLowerCase().includes(searchInputLowerCase) || book.author.toLowerCase().includes(searchInputLowerCase) ||
       book.isbn.toLowerCase().includes(searchInputLowerCase)
     );
-    showHomepage.value =  searchInput.value === '';;
+    showHomepage.value = searchInput.value === '';;
   };
 
+  const returnHome = () => {
+      showHomepage.value = true;
+  }
+  
 </script>
