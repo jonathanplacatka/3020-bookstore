@@ -38,9 +38,10 @@
                   <br>
                     <strong>Year:</strong> {{ book.year }}
                   <br>
+                  <div class="rating-container">
                   <strong>Rating: </strong>
-                  <br>
-                    <v-rating
+                  <v-rating 
+                    class="stars"
                     half-increments
                     hover
                     readonly
@@ -48,8 +49,8 @@
                     :size="20"
                     :model-value=book.rating
                     active-color="warning"
-                    />
-                  <br>
+                  />
+                </div>
                   
                  </div>
               </v-card-text>
@@ -174,5 +175,16 @@ export default {
   overflow: hidden;
   color: grey;
   font-size: 14px;
+}
+
+.rating-container {
+  display: inline-flex;
+  margin-top: 0px;
+}
+
+
+.stars {
+  margin-left: 5px;
+  margin-top: -5px;
 }
 </style>
