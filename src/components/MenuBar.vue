@@ -4,14 +4,14 @@
   <v-app-bar color="primary" elevation="0">
     <v-app-bar-nav-icon color="white" />
 
-    <div style="cursor: pointer; align-items: center;" @click="this.$emit('home')">
-      <img src="\src\assets\Logo-text-white.png" style="height:50px"  > 
-    </div>  
+
+    <div style="cursor: pointer; display: flex; align-items: start;" @click="this.$emit('home')">
+      <img src="\src\assets\Logo-white-v2.png" style="height:50px; margin-right: 10px;">
+      <h1 style="font-family: Caslon; font-variant: small-caps; margin: 0;">Peaks Bookstore</h1>
+    </div>
 
     <v-spacer></v-spacer>
     
-    <h1 style="font-family: Caslon; margin-left: 10px; text-align: center; font-variant: small-caps;">Peaks Bookstore</h1>
-    <v-spacer></v-spacer>
 
     <v-btn color="white" icon>
       <v-icon icon="mdi-home" color="white" size="large" @click="this.$emit('home')"></v-icon>
