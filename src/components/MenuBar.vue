@@ -4,7 +4,7 @@
   <v-app-bar color="primary" elevation="0">
     <v-app-bar-nav-icon color="white" />
     <a href="/" v-on:click="showHomepage.value = true" style="align-items: center;">
-      <img src="src\assets\Logo-text-white.png" style="height:50px">
+      <img src="\src\assets\Logo-text-white.png" style="height:50px">
     </a>
     <v-spacer></v-spacer>
     
