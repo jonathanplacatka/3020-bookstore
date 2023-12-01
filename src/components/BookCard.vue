@@ -17,12 +17,10 @@
         >
           <v-card class="content">
             <v-card-item>
+              <h2> {{ book.title }}</h2>
               <v-btn icon="$close" variant="text" @click="dialog = false" style="position: absolute; top: 2px; right: 2px;"></v-btn>
             </v-card-item>
             
-            <v-card-item>
-              <h2> {{ book.title }}</h2>
-            </v-card-item>
 
             <div>
             </div>
