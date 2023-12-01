@@ -3,10 +3,21 @@
     <v-main>
 
       <MenuBar/>
-
-      <div class="search-box">
-        <!-- does searching of the input when enter or search icon is pressed -->
-        <input v-model="searchInput" @keydown.enter.prevent="doSearch" placeholder="Search" class="input-style" />
+      <!-- does searching of the input when enter or search icon is pressed -->
+      <div class="search-box">      
+        <v-text-field
+        density="compact"
+        variant="outlined"
+        label="Search by Title, Author, or ISBN..."
+        append-inner-icon="mdi-magnify"
+        single-line
+        hide-details
+        outlined
+        v-model="searchInput"
+        @keydown.enter="search"
+        @click:append-inner="search"
+        class="input-style"
+      ></v-text-field>
       </div>
 
       <v-sheet class="content" elevation="0">
@@ -30,7 +41,6 @@
     </v-main>
   </v-app>
 </template>
-
 <style scoped>
 
 .content {
@@ -69,49 +79,39 @@
   padding: 0.5rem;
   padding-left: 1rem;
   margin: 1.5rem;
-  border: 2px solid rgb(102, 96, 96);
-  border-radius: 2rem;
+
 }
-
-
 
 .footer {
   position: fixed;
   bottom: 0;
   width: 100%;
 }
-
 </style>
 
 
 <script setup>
-import BookSlideGroup from '@/components/BookSlideGroup.vue'
-import MenuBar from '@/components/MenuBar.vue'
-import BookCard from '@/components/BookCard.vue'
-import books from '@/assets/books.json'
+  import BookSlideGroup from '@/components/BookSlideGroup.vue'
+  import MenuBar from '@/components/MenuBar.vue'
+  import BookCard from '@/components/BookCard.vue'
+  import books from '@/assets/books.json'
 
-import { ref } from 'vue'
-import { computed } from '@vue/reactivity'
+  import { ref } from 'vue'
+ 
+  const showHomepage = ref(true);
+  const searchInput = ref('');
+  const searchResults = ref([]);
 
+  const props = defineProps(['title']);
 
-const showHomepage = ref(true);
-const searchInput = ref('');
-
-//updates homepage depending on if there is no search input (show home page) or there is (show results)
-const doSearch = () => {
-  showHomepage.value = searchInput.value === '';
-};
-
-const props = defineProps(['title']);
-
-// gets all the books that match the search input value
-const searchResults = computed(() => {
-  const searchInputLowerCase = searchInput.value.toLowerCase();
-
-  return books.filter(book =>
-    book.title.toLowerCase().includes(searchInputLowerCase) || book.author.toLowerCase().includes(searchInputLowerCase) ||
-    book.isbn.toLowerCase().includes(searchInputLowerCase)
-  );
-});
+  // gets all the books that match the search input value
+  const search = () => {
+    const searchInputLowerCase = searchInput.value.toLowerCase();
+    searchResults.value = books.filter(book =>
+      book.title.toLowerCase().includes(searchInputLowerCase) || book.author.toLowerCase().includes(searchInputLowerCase) ||
+      book.isbn.toLowerCase().includes(searchInputLowerCase)
+    );
+    showHomepage.value =  searchInput.value === '';;
+  };
 
 </script>
