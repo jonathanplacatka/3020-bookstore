@@ -36,7 +36,7 @@
           </div>
         </div>
       </v-sheet>
-      <v-footer color="primary"><v-spacer></v-spacer>2023 - PEAKS LLC</v-footer>
+      <div class="mt-5"><v-footer color="primary"><v-spacer></v-spacer>2023 - PEAKS LLC</v-footer></div>
 
     </v-main>
   </v-app>
