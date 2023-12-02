@@ -115,6 +115,7 @@
   };
 
   const returnHome = () => {
+      searchInput.value = '';
       showHomepage.value = true;
   }
   
