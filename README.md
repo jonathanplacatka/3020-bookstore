@@ -1,7 +1,7 @@
 # Running the Website
 our website requires the browser to be started with a security  flag to run correctly 
 
-**NOTE: ALL CHROME INSTANCES MUST BE CLOSED BEFOREHAND!!!**
+**NOTE: ALL CHROME INSTANCES MUST BE CLOSED BEFORE STARTING THE BROWSER THIS WAY!!!** if any window/tabs are open, the flag won't apply
 
 ## Windows
 
