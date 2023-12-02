@@ -1,7 +1,7 @@
 # Running the Website
 our website requires the browser to be started with a security  flag to run correctly 
 
-**NOTE: ALL CHROME INSTANCES MUST BE CLOSED BEFORE STARTING THE BROWSER THIS WAY!!!** if any window/tabs are open, the flag won't apply
+**NOTE: ALL CHROME INSTANCES MUST BE CLOSED BEFOREHAND!!!**  (if any windows/tabs are open, the flag won't apply)
 
 ## Windows
 
@@ -30,6 +30,6 @@ our website requires the browser to be started with a security  flag to run corr
 
 # File Structure
 
-- open the compiled `index.html` file located in the root project directory using the instructions above. 
+- open the `index.html` file located in the root project directory using the instructions above. 
 
-- original source files are provided in the `source-files` folder for reference. do not attempt to directly open these files in the browser as they are not compiled.
+- original source files are provided in the `source-files` folder for reference (but are not needed to run the website)
